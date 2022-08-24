@@ -1,0 +1,52 @@
+.searchItems{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchAnchor a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.companyLogo{
+    padding: 20px;
+    border: var(--normal-border);
+    border-top: none;
+    background-color: var(--section-bg-color);
+}
+
+
+.slick-prev, .slick-next{
+    position: absolute;
+    font-size: 25px;
+    font-weight: 400;
+    top: 40%;
+    z-index: 10;
+}
+
+/* .slick-next.slick-disabled, .slick-prev.slick-disabled{
+  color: rgb(141, 141, 141);
+} */
+
+.slick-prev{
+  left: 0;
+}
+
+.slick-next{
+  right: 0;
+}
+
+
+.slick-slide img{
+  width: 70px;
+}
+
+.slick-initialized .slick-slide {
+  flex-direction: column;
+  display: block;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

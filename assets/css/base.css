@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --primary-color: #083B70;
+    --secondary-color: #2E92C3;
+    --tertiary-color: #DDEAF6;
+
+    --page-bg-color: #FFFFFF;
+    --page-txt-color: #000000;
+
+    --txt-black-color: #000000;
+    --txt-white-color: #FFFFFF;
+    --section-bg-color: #FCFCFC;;
+    --normal-border-color: #EAEAEA;
+    --normal-border: 1px solid #EAEAEA;
+    --border-radius: 8px;
+    --button-bg-color: #156BC3;
+    --button-txt-color: #FFFFFF;
+    --button-border: 2px solid #156BC3;
+    --button-border-radius: 8px;
+
+    --bullet-color: #9AC442;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6,p,span, div{
+    margin: 0;
+    padding: 0;
+}
+
+@media  screen and  (max-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 98%;
+    }
+}
+
+
+@media  screen and (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 96%;
+    }
+}
+
+
+button, input{
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+}
+
+.customBtn{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg-color);
+    color: var(--button-txt-color);
+    text-align: center;
+}

@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Page</title>
+    <!-- Bootstrap css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slick slider css -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- range slider css -->
+    <link rel="stylesheet" href="assets/css/al-range-slider.css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <!-- base css link -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <!-- header footer css link -->
+    <link rel="stylesheet" href="assets/css/header-footer.css">
+    <!-- product filter page css -->
+    <link rel="stylesheet" href="assets/css/product-filter-page.css">
+    <!-- Product page css link -->
+    <link rel="stylesheet" href="assets/css/search-page.css">
+</head>
+<body>
+    
+
+    <section class="HeaderTopPart">
+        <header class="container">
+            <nav>
+                <div class="topHeaderInner">
+                    <div class="siteLogo">
+                        <a href="https://dnelectro.com/">
+                            <img src="assets/images/site-logo.png" alt="DnElectro">
+                        </a>
+                    </div>
+                    <div class="contactInfo">
+                        <p>
+                            Consultation: <b>+371 28558558 or Leave a message</b>
+                        </p>
+                    </div>
+                    <div>
+                        <div class="dropdown">
+                            <button onclick="dropDownShow()" class="dropbtn">EN <i class="fa-solid fa-chevron-down"></i></button>
+                            <div class="dropdown-content" id="dropdownContent">
+                                <a href="#">RU</a>
+                                <a href="#">USA</a>
+                                <a href="#">China</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </section>
+
+    <section class="mobileSearchBar">
+        <div class="container">
+            <div class="mobileSearch">
+                <input class="searchInput" type="search" name="search" id="search" placeholder="I am looking for.." autocomplete="off">
+                <button class="searchIcon">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="HeaderBottomPart">
+        <header class="container">
+            <nav>
+                <div class="bottomHeaderInner">
+                    <div class="chosseCategory">
+                        <button onclick="categoryShowFunction()" class="searchBtn">
+                            <i class="fa-solid fa-bars"></i>
+                            <span class="choose">Choose</span> category
+                        </button>
+                    </div>
+                    <div class="searchBar">
+                        <input class="searchInput" type="search" name="search" id="search" placeholder="I am looking for.."autocomplete="off">
+                        <button class="searchIcon">
+                            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </button>
+                    </div>
+                    <div class="loginInfo">
+                         <div>
+                            <a href="#" class="login">
+                                <span><img src="assets/images/user.png" alt="Login icon"></span>
+                                <p>Login</p>
+                            </a>
+                          </div>
+                          <div>
+                             <a href="#" class="register">
+                                <span><img src="assets/images/register.png" alt="Register icon"></span>
+                            <p>Register</p>
+                             </a>
+                         </div>
+                         <div>
+                            <a href="#" class="cart">
+                                <span class="cartImg">
+                                    <img src="assets/images/cart.png" alt="Cart icon">
+                                    <span id="itemQnty">1</span>
+                                </span>
+                                <p>Your Cart</p>
+                                
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- all category is listed here -->
+                <div id="allCategoryList">
+                    <div class="innerAllCategoryList">
+                        <div class="tab">
+                            <button class="tablinks" onclick="categoryOpen(event, 'Mobile')" id="defaultOpen">
+                                <img src="assets/images/Mobile phones, Tablets, Photo.png" alt="icon">
+                                <p>Mobile phones, Tablets, Photo</p>
+                            </button>
+                            <button class="tablinks" onclick="categoryOpen(event, 'Computer')"><img src="assets/images/Computer Equipment.png" alt="icon">
+                                <p>Computer Equipment</p></button>
+                            <button class="tablinks" onclick="categoryOpen(event, 'Tv')"><img src="assets/images/TV and Home Appliances.png" alt="icon">
+                                <p>TV and Home Appliances</p></button>
+                            <button class="tablinks" onclick="categoryOpen(event, 'Home')"><img src="assets/images/For home and renovation.png" alt="icon">
+                                <p>For home and renovation</p></button>
+                            <button class="tablinks" onclick="categoryOpen(event, 'Car')"><img src="assets/images/Car goods.png" alt="icon">
+                                <p>Car goods</p></button>
+                            <button class="tablinks" onclick="categoryOpen(event, 'Office')"><img src="assets/images/Office goods.png" alt="icon">
+                                <p>Office goods</p></button>
+                            <button class="tablinks" onclick="categoryOpen(event, 'Sports')"><img src="assets/images/Sports, tourism and recreation.png" alt="icon">
+                                <p>Sports, tourism and recreation</p></button>
+                          </div>
+                          
+                          <div id="Mobile" class="tabcontent">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Phones and Accessories</h3>
+                                    <ul class="categoryLink">
+                                        <li class="categoryClick">
+                                            <a href="#https://dnelectro.com/en/mobilephonestabletsphoto/phonesandaccessories/smartphones">Smartphones</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/phonesandaccessories/phonescreenprotectors">Phone Screen Protectors</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/phonesandaccessories/powerbank">Power Bank</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/phonesandaccessories/phonecarmounts">Phone Car Mounts</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/phonesandaccessories/functionphones">Function Phones</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Health And Wellness</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/healthandwellness/fitnessbelts">Fitness Belts</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Tablets & E-Readers</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/tabletsereaders/tablets">Tablets</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/tabletsereaders/tabletcovers">Tablet covers</a>
+                                        </li>
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/mobilephonestabletsphoto/tabletsereaders/tabletaccessories">Tablet Accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/tabletsereaders/ruggedtabletaccessories">Rugged Tablet Accessories
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Camera And Photo</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/cameraandphoto/networkcameras">Network cameras</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/cameraandphoto/webcams">Webcams</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/cameraandphoto/actioncameras">Action Cameras</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/cameraandphoto/actioncameraaccessories">Action Camera Accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/cameraandphoto/camerahousings">Camera Housings</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/cameraandphoto/instantcameras">Instant Cameras</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/cameraandphoto/gimbal">Gimbal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Gadgets and VR</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/gadgetsandvr/drones">Drones</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/gadgetsandvr/droneaccessories">Drone Accessories</a>
+                                        </li><li>
+                                            <a href="#https://dnelectro.com/en/mobilephonestabletsphoto/gadgetsandvr/ereadersandaccessories">E-Readers And Accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/gadgetsandvr/flashmemorycardsandreaders">Flash memory cards and reader</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/gadgetsandvr/homeautomation">Home Automation</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/gadgetsandvr/robots">Robots</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/gadgetsandvr/scooters">Scooters</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/gadgetsandvr/smartwatches">Smart Watches</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/mobilephonestabletsphoto/gadgetsandvr/sportsandfitnessaccessories">Sports and Fitness Accessories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <div id="Computer" class="tabcontent">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Computer Components</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/computerequipment/computercomponents/cases">Cases</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/coolingaccessories">Cooling Accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/processors">Processors</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/coolers">Coolers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/powersupplyfordesktoppc">POWER SUPPLY for desktop PC</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/satahddfordesktopcomputer">SATA HDD for Desktop Computer</a>
+                                        </li>
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/computerequipment/computercomponents/hddmobilesata">HDD mobile SATA</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/hddssdinstallation">HDD / SSD installation</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/internalcomputercables">Internal Computer Cables</a>
+                                        </li>
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/computerequipment/computercomponents/motherboardsforamdprocessors">Motherboards for AMD process</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/motherboardsforintelprocessors">Motherboards for Intel processors</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/memorydimm">Memory DIMM</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/memorysodimm">Memory SODIMM</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">NUCs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/nucs">SSD External</a>
+                                        </li>
+                                        <li>
+                                           <a href="#">Show more <i class="fa-solid fa-chevron-down"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/ssdm2">SSD M.2</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/ssdsata">SSD SATA</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/systemvgacoolers">System & VGA Coolers</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/hddenterprisesata">HDD Enterprise SATA</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/nas">NAS</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/networkcables">Network Cables</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/othercomponents">Other Components</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/storagesoftware">Storage Software</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/hddenterprisesas">HDD Enterprise SAS</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/videocards">Video cards</a>
+                                         </li>
+                                         <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computercomponents/motherboards">Motherboards</a>
+                                         </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Computer Accessories</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/computeraccessories/usbhubs">USB hubs</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Desktop computers</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/computerequipment/desktopcomputers/allinone">All in one</a>
+                                        </li>
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/computerequipment/desktopcomputers/pcmountsandaccessories">PC mounts and accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/desktopcomputers/pcpowercables">PC Power Cables</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Monitors And Projectors</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/monitorsandprojectors/monitors">Monitors</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/monitorsandprojectors/lfdmonitors">LFD Monitors</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/monitorsandprojectors/fastenersandstands">Fasteners And Stands</a>
+                                        </li>
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/computerequipment/monitorsandprojectors/presentations">Presentations</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/monitorsandprojectors/projectorsandscreens">Projectors And Screens</a>
+                                        </li>
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/computerequipment/monitorsandprojectors/videocables">Video Cables</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Storage External</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/storageexternal/hddexternal35">HDD External 3.5''</a>
+                                        </li>
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/computerequipment/storageexternal/hddexternal25">HDD External 2.5''</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/storageexternal/usbflashdrives">USB flash drives</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Keyboards And Mice</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/keyboardsandmice/mousedevices">Mouse Devices</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/keyboardsandmice/keyboards">Keyboards</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Laptops And Accessories</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/laptopsandaccessories/laptops">Laptops</a>
+                                        </li>
+                                        <li>
+                                            <a href="#https://dnelectro.com/en/computerequipment/laptopsandaccessories/laptopaccessories">Laptop accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/laptopsandaccessories/docksforlaptops">Docks for laptops</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/laptopsandaccessories/bagsforlaptops">Bags for laptops</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/laptopsandaccessories/chargersforlaptops">Chargers for laptops</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Audio & Hifi</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/audiohifi/audiocables">Audio cables</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/audiohifi/headphones">Headphones</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/audiohifi/headset">Headset</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/audiohifi/homeaudio">Home Audio</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/audiohifi/microphones">Microphones</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/audiohifi/mp3players">MP3 players</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/audiohifi/speakers">Speakers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/audiohifi/upsforworkstations">UPS for workstations</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Printers, Scanners & Accessorie</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/printersscannersaccessories/allinone">All in one</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/printersscannersaccessories/laserprinters">Laser printers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/printersscannersaccessories/laserprinteraccessories">Laser Printer Accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/printersscannersaccessories/inkjetprinters">Inkjet printers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/printersscannersaccessories/inkaccessories">Ink Accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/printersscannersaccessories/3dprinters">3D printers</a>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Cables And Tools</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/cablesandtools/charger">Charger</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/cablesandtools/iocardsandadapters">I / O Cards And Adapters</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/cablesandtools/tool">Tool</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/cablesandtools/usbcables">USB cables</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Servers And Components</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/serversandcomponentsaccessories">Servers And Components Acc</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/coolingparts">Cooling Parts</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/memory">Memory</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/servercables">Server Cables</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/serverdrivecontrollers">Server Drive Controllers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/serverosandapplications">Server OS and applications</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/serverparts">Server Parts</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/serversystems">Server Systems</a>
+                                        </li><li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/servers">Servers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/servercpu">Server CPU</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/ssdenterprisepcie">SSD Enterprise PCI-E</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/serversandcomponents/ssdenterprisesata">SSD Enterprise SATA</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Network</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/3g4grouters">3G/4G Routers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/routers">Routers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/antennasandaccessories">Antennas And Accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/multimediaconvertersandmodules">Multimedia Converters And Modu</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/networkaccessories">Network Accessories</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/outdoornetworking">Outdoor Networking</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/poedevices">POE devices</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/powerline">Power line</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/switches">Switches</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/wirednetworkadapters">Wired Network Adapters</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/wirelessaccesspoints">Wireless Access Points</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/wirelessnetworkadapters">Wireless Network Adapters</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/wirelessnetworkcontrollers">Wireless Network Controllers</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/wirelessrangeextenders">Wireless Range Extenders</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/network/wirelessrouters">
+                                                Wireless Routers</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">Software</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/software/windowsretail">Windows Retail</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/computerequipment/software/operatingsystem">Operating system</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <div id="Tv" class="tabcontent">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">TV & Home Cinema</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/tvhomecinema/tvs">TVs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/tvhomecinema/remotecontrol">Remote control</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Kitchen equipment</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/blender">Blender</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/breadmakers">Bread Makers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/coffeegrinder">Coffee grinder</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/coffeemachine">Coffee machine</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/foodprocessors">Food processors</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/foodslicers">Food Slicers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/fruitdryers">Fruit Dryers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/icecreammanufacturers">Ice Cream Manufacturers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/juicesqueezers">Juice Squeezers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/teapot">Teapot</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/meatmincers">Meat Mincers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/microwaves">Microwaves</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/minioven">Mini Oven</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/mixer">Mixer</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/multicookingdevice">Multi cooking device</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/refrigerator">Refrigerator</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/toasters">Toasters</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/waffleirons">Waffle Irons</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/kitchenequipment/kitchenutensils">Kitchen utensils</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Household Appliances</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/convectorheaters">Convector Heaters</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/dehumidifiers">Dehumidifiers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/humidifier">Humidifier</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/iron">Iron</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/otherdevices">Other Devices</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/scales">Scales</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/vacuumcleaners">Vacuum cleaners</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/vacuumcleanersrobots">Vacuum Cleaners Robots</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/vacuumrobotaccessories">Vacuum Robot Accessories</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/householdappliances/fan">Fan</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Hygiene</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/hygiene/epilators">Epilators</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/hygiene/haircuttingmachines">Hair Cutting Machines</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/hygiene/hairdryer">Hair dryer</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/hygiene/hairstraighteners">Hair straighteners</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/tvandhomeappliances/hygiene/hairstylers">Hair Stylers</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div id="Home" class="tabcontent">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Lighting</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/emergencyled">Emergency LED</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/fluorescenttubes">Fluorescent Tubes</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/lightingfixtures">Lighting fixtures</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/tablelamps">Table lamps</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/halogenbulbs">Halogen Bulbs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/flashlights">Flashlights</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/compactfluorescentlamps">Compact Fluorescent Lamps</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/incandescentlightbulbs">Incandescent Light Bulbs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/lamps">Lamps</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/ledtubes">LED Tubes</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/ledfilamentdecor">LED Filament & Decor</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/ledpanels">LED Panels</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/lightbulbs">Light Bulbs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/ledbulbs">LED Bulbs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/metalhalidesodiummercurybulbs">Metal Halide & Sodium & Mercur</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/mixlightning">MIX Lightning</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/spotlights">Spotlights</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/ledreflectorbulbs">LED Reflector Bulbs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/smartlightfixtures">Smart Light Fixtures</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/specialbulbs">Special Bulbs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/lighting/garlands">Garlands</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Power Supplies & UPS</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/powersuppliesups/batteries">Batteries</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/powersuppliesups/batteriesforups">Batteries For UPS</a>
+                                        </li>
+                                    </ul>
+
+                                    <h3 class="categoryTitle">NEW</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/new/surgeprotectors">Surge Protectors</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/new/powerstrips">Power Strips</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/new/cableconnectors">Cable Connectors</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/new/wagoclamps">WAGO clamps</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Security Solutions</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/securitysolutions/detectors">Detectors</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/securitysolutions/ipcameras">IP Cameras</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/securitysolutions/keypads">Keypads</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/securitysolutions/remotecontrollers">Remote Controllers</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/securitysolutions/sirens">Sirens</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/securitysolutions/accessories">Accessories</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <h3 class="categoryTitle">Gate automation</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/forhomeandrenovation/gateautomation/remotecontrolsforgates">Remote controls for gates</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <div id="Car" class="tabcontent">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <h3 class="categoryTitle">Navigation And Car Electronics</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/cargoods/navigationandcarelectronics/carvideoplayers">Car Video Players</a>
+                                        </li><li>
+                                            <a href="https://dnelectro.com/en/cargoods/navigationandcarelectronics/navigationaccessories">Navigation Accessories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <div id="Office" class="tabcontent">
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <h3 class="categoryTitle">Office goods</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/officegoods/bindingmachines">Binding Machines</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/officegoods/office">Office</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/officegoods/otherofficeproducts">Other Office Products</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/officegoods/shredder">Shredder</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/officegoods/workplaceergonomics">Workplace Ergonomics</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div id="Sports" class="tabcontent">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <h3 class="categoryTitle">Sports And Wearable</h3>
+                                    <ul class="categoryLink">
+                                        <li>
+                                            <a href="https://dnelectro.com/en/sportstourismandrecreation/hunting-and-fishing">Hunting Cameras</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/sportstourismandrecreation/sport">Sports</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/sportstourismandrecreation/leisure">Leisure</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dnelectro.com/en/sportstourismandrecreation/tourism">Tourism</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                 </div>
+                
+            </nav>
+        </header>
+    </section>
+
+    <section class="searchProduct py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div  id="mobileProductSideBar" class="filterProductOptions mobileShowFilter">
+                        <div id="filterBox" class="filterBox">
+                            <div id="productCategory">
+                                 <div class="searchItems closeBtnDiv mb-2">
+                                    <img src="assets/images/Mobile phones, Tablets, Photo.png" alt="mobile icon">
+                                    <h4>Mobile phones, Tablets</h4><button id="closemobileProductSideBar"><i class="fa-solid fa-xmark"></i></button>
+                                 </div>
+                                 <div class="py-2 searchAnchor">
+                                    <a href="#">
+                                        <i class="fa-solid fa-chevron-left mr-2"></i>
+                                        Phones and Accessories
+                                    </a>
+                                 </div>
+                                 <div class="innerCategory ml-4">
+                                     <a href="#">Smartphones</a>
+                                     <a href="#">Power Bank</a>
+                                     <a href="#">Phone Screen Protectors</a>
+                                     <a href="#">Phone Car Mounts</a>
+                                     <a href="#">Function Phones</a>
+                                 </div>
+                                 <p class="py-2">Cables And Tools</p>
+                                 <div class="innerCategory ml-4">
+                                     <a href="#">Charger</a>
+                                     <a href="#">I / O Cards And Adapters</a>
+                                     <a href="#">Tool</a>
+                                     <a href="#">Phone Car Mounts</a>
+                                     <a href="#">USB cables</a>
+                                 </div><hr>
+                            </div>
+
+                            <div class="showItems">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                      <div class="accordion-item-header">
+                                        <h4 class="py-2">Show items</h4>
+                                      </div>
+                                      <div class="accordion-item-body">
+                                        <div class="accordion-item-body-content py-2">
+                                            <label class="customCheckBox">
+                                                <p>In Stock</p>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                              </label>
+                                              <label class="customCheckBox">
+                                                <p>Sale</p>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                              </label>
+                                              <label class="customCheckBox">
+                                                <p>New</p>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                              </label>
+                                              <label class="customCheckBox">
+                                                <p>Top product </p>
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                              </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                 </div>
+                            </div><hr>
+
+                            <div class="priceShow">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                      <div class="accordion-item-header">
+                                        <h4 class="py-2">Price, €</h4>
+                                      </div>
+                                      <div class="accordion-item-body">
+                                        <div class="accordion-item-body-content py-2">
+                                            <div class="priceSlider"></div>
+                                            <span class="toClass">To</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                 </div>
+                            </div><hr>
+
+                            <div class="manufacturerShow">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <div class="accordion-item-header">
+                                            <h4 class="py-2">Manufactures</h4>
+                                          </div>
+                                          <div class="accordion-item-body">
+                                             <div class="py-2">
+                                                <input class="searchField" type="search" name="searchProduct" id="searchProduct" placeholder="Search">
+                                             </div>
+                                            <div class="accordion-item-body-content py-2">
+                                                 <label class="customCheckBox">
+                                                    <p>Apple</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>Apple Renewd</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>Samsung</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>Huawei</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>LG</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>Sony</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>Xiaomi</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>Realmi</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>Other</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                <div class="hideBtn">Hide</div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                 </div>
+                            </div><hr>
+
+                            <div class="manufacturerShow">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <div class="accordion-item-header">
+                                            <h4 class="py-2">Rear camera</h4>
+                                          </div>
+                                          <div class="accordion-item-body">
+                                             <div class="py-2">
+                                                <input class="searchField" type="search" name="searchProduct" id="searchProduct" placeholder="Search">
+                                             </div>
+                                            <div class="accordion-item-body-content py-2">
+                                                 <label class="customCheckBox">
+                                                    <p>2 MP</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>5 MP</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>8 MP</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>13 MP</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>50 MP</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>64 MP</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                  <label class="customCheckBox">
+                                                    <p>108 MP</p>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                <div class="hideBtn">Hide</div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                 </div>
+                            </div><hr>
+
+                            <div class="displaySize">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                      <div class="accordion-item-header">
+                                        <h4 class="py-2">Dicplay size</h4>
+                                      </div>
+                                      <div class="accordion-item-body">
+                                        <div class="accordion-item-body-content pt-2">
+                                            <div class="displaySizeSlider"></div>
+                                            <span class="toClass">To</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                   <div class="searchCountBox">
+                      <h2>Mobile phones, Tablets</h2>
+                   </div>
+                   <div class="companyLogo mb-3">
+                      <div class="companyLogoSlider">
+                           <div>
+                              <img src="assets/images/Samsung.png" alt="Samsung">
+                              <p>Samsung</p>
+                           </div>
+                           <div>
+                            <img src="assets/images/Xiaomi.png" alt="Xiaomi">
+                            <p>Xiaomi</p>
+                         </div>
+                         <div>
+                            <img src="assets/images/Apple Renewd.png" alt="Apple">
+                            <p>Apple Renewd</p>
+                         </div>
+                         <div>
+                            <img src="assets/images/OnePlus.png" alt="OnePlus">
+                            <p>One Plus</p>
+                         </div>
+                         <div>
+                            <img src="assets/images/Google.png" alt="Google">
+                            <p>Google</p>
+                         </div>
+                         <div>
+                            <img src="assets/images/Huawei.png" alt="Huawei">
+                            <p>Huawei</p>
+                         </div>
+                      </div>
+                   </div>
+
+                   <div class="mobileFilterbox">
+                    <div class="mobileShowingProductQnty">
+                      <p>Show: 1 - 48 of 2203</p>
+                    </div>
+                    <div class="filterOptions">
+                        <button id="productFilterMobileBtn">
+                          <i class="fa-solid fa-arrow-down-wide-short mr-2"></i>
+                          <p>Filter Products</p>
+                        </button>
+                      </div>
+                 </div>
+
+                   <div class="productDetailsInfo">
+                      <div class="productDetailsBox">
+                         <div class="productDetailsInner">
+                             <div class="mobileHideContent">
+                                <p>Show: 1 - 48 of 2203</p>
+                             </div>
+                             <div class="rightDetails">
+                                  <div class="sortBy">
+                                    <p>Sort by:</p>
+                                  </div>
+                                  <div class="sortIconFix">
+                                     <div class="iconBoxFeatures">
+                                        <span><i class="fa-solid fa-arrow-right-arrow-left"></i></span>
+                                        <select>
+                                          <option value="Featured">Featured</option>
+                                          <option value="High">High to low</option>
+                                          <option value="Low">Low to high</option>
+                                        </select>
+                                     </div>
+                                  </div>
+                                  <div>
+                                     <p id="productCount">48</p>
+                                  </div>
+                                  <div class="gridProduct">
+                                     <button id="gridShow"><img src="assets/images/two-grid.png" alt="Grid image"></button>
+                                  </div>
+                                  <div class="listBar">
+                                     <button id="listProduct"><i class="fa-solid fa-bars"></i></button>
+                                  </div>
+                             </div>
+                         </div>
+                      </div>
+                   </div>
+                   
+                   <div class="productShowGrid">
+                      <div id="productShowInner" class="productShowInner">
+                            <div class="singleProductShow">
+                              <a href="#" id="productListView">
+                                <div class="productIMG">
+                                    <img src="assets/images/product-1.png" alt="">
+                                 </div>
+                                 <div class="productInfoContainer">
+                                    <h2 class="productPrice py-2">122.20 €</h2>
+                                    <p><i class="fa-solid fa-check mr-2"></i>VAT included</p>
+                                    <p class="productName py-2">MOBILE PHONE GALAXY A13 128GB/WHITE SM-A135F SAMSUNG</p>
+                                    <div class="proDescip">
+                                        <p>Dimensions: 165.1 x 76.4 x 8.8 mm</p>
+                                        <p>Display technology: TFT-LCD</p>
+                                        <p>Mobile OS: Android 12.0</p>
+                                        <p>Fingerprint reader: Yes</p>
+                                        <p>Front-facing Camera: 8MP</p>
+                                        <p class="pt-2"><i class="fa-solid fa-circle mr-2"></i>Fast Shipping</p>
+                                        <p><i class="fa-solid fa-circle mr-2"></i>In Stock</p>
+                                    </div>
+                                </div>
+                              </a>
+                              <img class="typeStock" src="assets/images/Type=InStock, State=Fold.png" alt="">
+                            </div>
+                            <div class="singleProductShow">
+                                <a href="#" id="productListView">
+                                  <div class="productIMG">
+                                      <img src="assets/images/product-1.png" alt="">
+                                   </div>
+                                   <div class="productInfoContainer">
+                                      <h2 class="productPrice py-2">122.20 €</h2>
+                                      <p><i class="fa-solid fa-check mr-2"></i>VAT included</p>
+                                      <p class="productName py-2">MOBILE PHONE GALAXY A13 128GB/WHITE SM-A135F SAMSUNG</p>
+                                      <div class="proDescip">
+                                          <p>Dimensions: 165.1 x 76.4 x 8.8 mm</p>
+                                          <p>Display technology: TFT-LCD</p>
+                                          <p>Mobile OS: Android 12.0</p>
+                                          <p>Fingerprint reader: Yes</p>
+                                          <p>Front-facing Camera: 8MP</p>
+                                          <p class="pt-2"><i class="fa-solid fa-circle mr-2"></i>Fast Shipping</p>
+                                          <p><i class="fa-solid fa-circle mr-2"></i>In Stock</p>
+                                      </div>
+                                  </div>
+                                </a>
+                                <img class="typeStock" src="assets/images/Type=InStock, State=Fold.png" alt="">
+                              </div>
+                              <div class="singleProductShow">
+                                <a href="#" id="productListView">
+                                  <div class="productIMG">
+                                      <img src="assets/images/product-1.png" alt="">
+                                   </div>
+                                   <div class="productInfoContainer">
+                                      <h2 class="productPrice py-2">122.20 €</h2>
+                                      <p><i class="fa-solid fa-check mr-2"></i>VAT included</p>
+                                      <p class="productName py-2">MOBILE PHONE GALAXY A13 128GB/WHITE SM-A135F SAMSUNG</p>
+                                      <div class="proDescip">
+                                          <p>Dimensions: 165.1 x 76.4 x 8.8 mm</p>
+                                          <p>Display technology: TFT-LCD</p>
+                                          <p>Mobile OS: Android 12.0</p>
+                                          <p>Fingerprint reader: Yes</p>
+                                          <p>Front-facing Camera: 8MP</p>
+                                          <p class="pt-2"><i class="fa-solid fa-circle mr-2"></i>Fast Shipping</p>
+                                          <p><i class="fa-solid fa-circle mr-2"></i>In Stock</p>
+                                      </div>
+                                  </div>
+                                </a>
+                                <img class="typeStock" src="assets/images/Type=InStock, State=Fold.png" alt="">
+                              </div>
+                              <div class="singleProductShow">
+                                <a href="#" id="productListView">
+                                  <div class="productIMG">
+                                      <img src="assets/images/product-1.png" alt="">
+                                   </div>
+                                   <div class="productInfoContainer">
+                                      <h2 class="productPrice py-2">122.20 €</h2>
+                                      <p><i class="fa-solid fa-check mr-2"></i>VAT included</p>
+                                      <p class="productName py-2">MOBILE PHONE GALAXY A13 128GB/WHITE SM-A135F SAMSUNG</p>
+                                      <div class="proDescip">
+                                          <p>Dimensions: 165.1 x 76.4 x 8.8 mm</p>
+                                          <p>Display technology: TFT-LCD</p>
+                                          <p>Mobile OS: Android 12.0</p>
+                                          <p>Fingerprint reader: Yes</p>
+                                          <p>Front-facing Camera: 8MP</p>
+                                          <p class="pt-2"><i class="fa-solid fa-circle mr-2"></i>Fast Shipping</p>
+                                          <p><i class="fa-solid fa-circle mr-2"></i>In Stock</p>
+                                      </div>
+                                  </div>
+                                </a>
+                                <img class="typeStock" src="assets/images/Type=InStock, State=Fold.png" alt="">
+                              </div>
+                              <div class="singleProductShow">
+                                <a href="#" id="productListView">
+                                  <div class="productIMG">
+                                      <img src="assets/images/product-1.png" alt="">
+                                   </div>
+                                   <div class="productInfoContainer">
+                                      <div class="productPrice py-2">
+                                        <p class="discount">122.20 €</strike> 
+                                        <p class="salePrice">
+                                            <i class="fa-solid fa-fire-flame-curved mr-2"></i>
+                                            <span>€100.00</span>
+                                        </p>
+                                    </div>
+                                      <p><i class="fa-solid fa-check mr-2"></i>VAT included</p>
+                                      <p class="productName py-2">MOBILE PHONE GALAXY A13 128GB/WHITE SM-A135F SAMSUNG</p>
+                                      <div class="proDescip">
+                                          <p>Dimensions: 165.1 x 76.4 x 8.8 mm</p>
+                                          <p>Display technology: TFT-LCD</p>
+                                          <p>Mobile OS: Android 12.0</p>
+                                          <p>Fingerprint reader: Yes</p>
+                                          <p>Front-facing Camera: 8MP</p>
+                                          <p class="pt-2"><i class="fa-solid fa-circle mr-2"></i>Fast Shipping</p>
+                                          <p><i class="fa-solid fa-circle mr-2"></i>In Stock</p>
+                                      </div>
+                                  </div>
+                                </a>
+                                <img class="typeStock" src="assets/images/Type=InStock, State=Fold.png" alt="">
+                                <img class="typeNew" src="assets/images/Type=New, State=Fold.png" alt="">
+                                <img class="typeHot" src="assets/images/Type=Hot, State=Fold.png" alt="">
+                                <img class="typeTop" src="assets/images/Type=Top, State=Fold.png" alt="">
+                                <img class="typeLizing" src="assets/images/Type=Lizing, State=Fold.png" alt="">
+                              </div>
+
+                              <div class="singleProductShow">
+                                <a href="#" id="productListView">
+                                  <div class="productIMG">
+                                      <img src="assets/images/product-1.png" alt="">
+                                   </div>
+                                   <div class="productInfoContainer">
+                                      <h2 class="productPrice py-2">122.20 €</h2>
+                                      <p><i class="fa-solid fa-check mr-2"></i>VAT included</p>
+                                      <p class="productName py-2">MOBILE PHONE GALAXY A13 128GB/WHITE SM-A135F SAMSUNG</p>
+                                      <div class="proDescip">
+                                          <p>Dimensions: 165.1 x 76.4 x 8.8 mm</p>
+                                          <p>Display technology: TFT-LCD</p>
+                                          <p>Mobile OS: Android 12.0</p>
+                                          <p>Fingerprint reader: Yes</p>
+                                          <p>Front-facing Camera: 8MP</p>
+                                          <p class="pt-2"><i class="fa-solid fa-circle mr-2"></i>Fast Shipping</p>
+                                          <p><i class="fa-solid fa-circle mr-2"></i>In Stock</p>
+                                      </div>
+                                  </div>
+                                </a>
+                                <img class="typeStock" src="assets/images/Type=InStock, State=Fold.png" alt="">
+                              </div>
+                              <div class="singleProductShow">
+                                <a href="#" id="productListView">
+                                  <div class="productIMG">
+                                      <img src="assets/images/product-1.png" alt="">
+                                   </div>
+                                   <div class="productInfoContainer">
+                                      <h2 class="productPrice py-2">122.20 €</h2>
+                                      <p><i class="fa-solid fa-check mr-2"></i>VAT included</p>
+                                      <p class="productName py-2">MOBILE PHONE GALAXY A13 128GB/WHITE SM-A135F SAMSUNG</p>
+                                      <div class="proDescip">
+                                          <p>Dimensions: 165.1 x 76.4 x 8.8 mm</p>
+                                          <p>Display technology: TFT-LCD</p>
+                                          <p>Mobile OS: Android 12.0</p>
+                                          <p>Fingerprint reader: Yes</p>
+                                          <p>Front-facing Camera: 8MP</p>
+                                          <p class="pt-2"><i class="fa-solid fa-circle mr-2"></i>Fast Shipping</p>
+                                          <p><i class="fa-solid fa-circle mr-2"></i>In Stock</p>
+                                      </div>
+                                  </div>
+                                </a>
+                                <img class="typeStock" src="assets/images/Type=InStock, State=Fold.png" alt="">
+                              </div>
+                              <div class="singleProductShow">
+                                <a href="#" id="productListView">
+                                  <div class="productIMG">
+                                      <img src="assets/images/product-1.png" alt="">
+                                   </div>
+                                   <div class="productInfoContainer">
+                                      <h2 class="productPrice py-2">122.20 €</h2>
+                                      <p><i class="fa-solid fa-check mr-2"></i>VAT included</p>
+                                      <p class="productName py-2">MOBILE PHONE GALAXY A13 128GB/WHITE SM-A135F SAMSUNG</p>
+                                      <div class="proDescip">
+                                          <p>Dimensions: 165.1 x 76.4 x 8.8 mm</p>
+                                          <p>Display technology: TFT-LCD</p>
+                                          <p>Mobile OS: Android 12.0</p>
+                                          <p>Fingerprint reader: Yes</p>
+                                          <p>Front-facing Camera: 8MP</p>
+                                          <p class="pt-2"><i class="fa-solid fa-circle mr-2"></i>Fast Shipping</p>
+                                          <p><i class="fa-solid fa-circle mr-2"></i>In Stock</p>
+                                      </div>
+                                  </div>
+                                </a>
+                                <img class="typeStock" src="assets/images/Type=InStock, State=Fold.png" alt="">
+                              </div>
+
+                          </div>
+                   </div>
+
+                   <div class="paginationBox">
+                       <div class="paginationItems">
+                            <span><i class="fa-solid fa-chevron-left"></i></span>
+                            <p class="activePagination">1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+                            <p>..</p>
+                            <p>23</p>
+                            <span><i class="fa-solid fa-chevron-right"></i></span>
+                       </div>
+                       <div>
+                          <p>Show: 1 - 48 of 2203</p>
+                       </div>
+                   </div>
+
+
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="registerInfoImg pt-4">
+        <div class="container">
+           <div class="row">
+              <div class="col-12">
+                <a href="#">
+                  <img src="assets/images/register des.jpg" alt="Register details image">
+                </a>
+              </div>
+           </div>
+        </div>
+     </section>
+ 
+ 
+     <section class="footerPart">
+         <footer class="container">
+             <div class="row">
+                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                     <h3 class="footerTitle">E-shop</h3>
+                     <ul class="footerLink">
+                         <li>
+                             <a href="https://dnelectro.com/en/terms-conditions">Terms & Conditions</a>
+                         </li>
+                         <li>
+                             <a href="https://dnelectro.com/en/returns">Returns</a>
+                         </li>
+                         <li>
+                             <a href="https://dnelectro.com/en/payments">Payments</a>
+                         </li>
+                         <li>
+                             <a href="https://dnelectro.com/en/delivery">Delivery</a>
+                         </li>
+                         <li>
+                             <a href="https://dnelectro.com/en/faq">F.A.Q.</a>
+                         </li>
+                         <li>
+                             <a href="https://dnelectro.com/en/about-us">About Us</a>
+                         </li>
+                         <li>
+                             <a href="https://dnelectro.com/en/privacy-policies">Privacy Policies</a>
+                         </li>
+                     </ul>
+                 </div>
+ 
+                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                     <h3 class="footerTitle">Categories</h3>
+                     <ul class="footerLink">
+                         <li>
+                             <a href="#">For home and renovation</a>
+                         </li>
+                         <li>
+                             <a href="#">Computer Equipment</a>
+                         </li>
+                         <li>
+                             <a href="#">Mobile phones, Tablets, Photo</a>
+                         </li>
+                         <li>
+                             <a href="#">Car goods</a>
+                         </li>
+                         <li>
+                             <a href="#">TV and Home Appliances</a>
+                         </li>
+                         <li>
+                             <a href="#">Sports, tourism and recreation</a>
+                         </li>
+                         <li>
+                             <a href="#">Children's products</a>
+                         </li>
+                     </ul>
+                 </div>
+ 
+                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                     <h3 class="footerTitle">Working time</h3>
+                     <ul class="footerLink">
+                         <li>
+                            <p>
+                              Monday ✔️ 9:00-17:00
+                            </p>
+                         </li>
+                         <li>
+                            <p>
+                              Tuesday ✔️ 9:00-17:00
+                            </p>
+                         </li>
+                         <li>
+                            <p>
+                             Wednesday ✔️ 9:00-17:00
+                            </p>
+                         </li>
+                         <li>
+                            <p>
+                               Thursday ✔️ 9:00-17:00
+                            </p>
+                         </li>
+                         <li>
+                            <p> 
+                              Friday ✔️ 9:00-17:00
+                            </p>
+                         </li>
+                         <li>
+                            <p>
+                             Saturday ✔️ 10:00-13:00
+                            </p>
+                         </li>
+                         <li>
+                            <p>
+                             Sunday ✔️ 10:00-13:00
+                            </p>
+                         </li>
+                         <li>
+                             <a href="https://www.google.com/maps/place/M%C5%ABkusalas+iela+41,+Zemgales+priek%C5%A1pils%C4%93ta,+R%C4%ABga,+LV-1004,+Latvia/@56.9357282,24.1027298,17z/data=!4m5!3m4!1s0x46eed02c4ad3a5c1:0xd01c32ee76d001ad!8m2!3d56.9357282!4d24.1027298">
+                                 DN Electro SIA, Reg.Nr. 40203286077, Kalnciema Iela 148, Zemgales priekšpilsēta, Rīga, LV-1046
+                             </a>
+                         </li>
+                     </ul>
+                 </div>
+ 
+                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                     <h3 class="footerTitle">Working time</h3>
+                      <div class="subscribeEmailInput py-2">
+                         <input type="email" name="subscribeEmail" id="subscribeEmail">
+                         <button type="submit" class="sendBtn">Send</button>
+                      </div>
+                      <div class="shareIcon py-2">
+                         <a href="#">
+                             <span><i class="fa-brands fa-linkedin-in"></i></span>
+                         </a>
+                         <a href="#">
+                             <span><i class="fa-brands fa-facebook-f"></i></span>
+                         </a>
+                         <a href="#">
+                             <span><i class="fa-brands fa-twitter"></i></span>
+                         </a>
+                     </div>
+                     <div class="EmailPhone py-2">
+                         <span>
+                             <p>Email:</p>
+                             <p>info@dnelectro.com</p>
+                         </span>
+                         <span>
+                             <p>Phone:</p>
+                             <p>+371 28558558</p>
+                         </span>
+                     </div>
+                     <div class="paymentIcon py-2">
+                         <img src="assets/images/visa.png" alt="visa">
+                     </div>
+                     <div class="footerLinkButton">
+                         <a href="#">
+                            <img src="assets/images/logo_button.gif" alt="link image">
+                         </a>
+                         <a href="#">
+                             <img src="assets/images/kurpirkt88.gif" alt="link image">
+                          </a>
+                          <a href="#">
+                             <img src="assets/images/ceno lv.svg" alt="link image">
+                          </a>
+                     </div>
+                     <div class="evaImg py-2">
+                         <img src="assets/images/eVA safe shop logo.png" alt="eVA safe shop logo">
+                     </div>
+                 </div>
+             </div>
+         </footer>
+     </section>
+ 
+     
+     
+     <!-- Jquery cdn link -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- Bootstrap js cdn link -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+     <!-- slick slider js link -->
+     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <!-- range slider js link file -->
+     <script src="assets/js-code/al-range-slider.js"></script>
+     <!-- search page js link -->
+     <script src="assets/js-code/search-page.js"></script>
+     <!-- main js code -->
+     <script src="assets/js-code/main.js"></script>
+     <script>
+ 
+     </script>
+ </body>
+ </html>
